@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMOS | INTERACTIVE RESUME</title>
+    <style>
+        :root {
+            --primary: #007bff;
+            --bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --text: #333;
+            --secondary-text: #666;
+        }
+
+        /* Dark Mode Variables */
+        .dark-mode {
+            --bg: #121212;
+            --card-bg: #1e1e1e;
+            --text: #e0e0e0;
+            --secondary-text: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            transition: all 0.4s ease;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50px;
+            border: none;
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .theme-toggle:hover { transform: scale(1.1); }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            margin-bottom: 30px;
+            animation: slideInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+
+        /* Profile Section */
+        .header-flex {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Organic Shape */
+            border: 5px solid var(--primary);
+            transition: 0.5s;
+            object-fit: cover;
+        }
+
+        .profile-img:hover {
+            border-radius: 50%;
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        /* Skill Progress Bars */
+        .skill-container { margin-bottom: 15px; }
+        .skill-name { font-weight: bold; display: block; margin-bottom: 5px; }
+        .bar-bg {
+            background: #eee;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            background: var(--primary);
+            height: 100%;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+        th { background: var(--primary); color: white; padding: 15px; }
+        td { padding: 12px; border-bottom: 1px solid #ddd; color: var(--secondary-text); }
+        tr:hover { background: rgba(0, 123, 255, 0.05); }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header-flex { text-align: center; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Mode</button>
+
+    <section class="header-flex">
+        <img src="irish.jpg" alt="Irish Ramos" class="profile-img">
+        <div>
+            <h1 style="margin:0;">Jennievive Irish G. Ramos</h1>
+            <p style="color: var(--primary); font-weight: bold;">IT Student | Aspiring Developer</p>
+            <small>📍 Concepcion, Tarlac | 📞 +63 9192407592</small>
+        </div>
+    </section>
+
+    <section>
+        <h3 style="border-left: 4px solid var(--primary); padding-left: 10px;">Career Objective</h3>
+        <p>Seeking to bridge the gap between technical knowledge and real-world application, aiming for excellence in the IT industry through continuous learning.</p>
+    </section>
+
+    <section>
+        <h3>Software Proficiency</h3>
+        <div class="skill-container">
+            <span class="skill-name">HTML / CSS</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill-container">
+            <span class="skill-name">Python</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 60%;"></div></div>
+        </div>
+        <div class="skill-container">
+            <span class="skill-name">Design (Canva/Photo Editing)</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Character Reference</h3>
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jennnievive Ramos</td>
+                        <td>Student</td>
+                        <td>09637102364</td>
+                    </tr>
+                    <tr>
+                        <td>Virgilio Ramos Jr.</td>
+                        <td>Head Chef - Peri-Peri</td>
+                        <td>09702038224</td>
+                    </tr>
+                    <tr>
+                        <td>Jenalyn Ramos</td>
+                        <td>Electronics Expert</td>
+                        <td>09637102364</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<script>
+    // Toggle Dark Mode
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    // Trigger Skill Bar animation on load
+    window.onload = () => {
+        const bars = document.querySelectorAll('.bar-fill');
+        bars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 500);
+        });
+    };
+</script>
+
+</body>
+</html>

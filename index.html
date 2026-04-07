@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jennievive Irish | EDM Portfolio</title>
+  <style>
+    
+    body {
+      background: #0a0a0b;
+      color: #e0e0e0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    body::before {
+      content: "DATA 0101 EDM 1100 SYSTEM 0011";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      color: rgba(0, 255, 128, 0.03);
+      font-size: 12px;
+      line-height: 15px;
+      word-wrap: break-word;
+      z-index: -1;
+      animation: matrixScroll 20s linear infinite;
+    }
+
+    @keyframes matrixScroll {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+
+
+    .container {
+      max-width: 850px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 50px;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      animation: slideUp 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+
+    .profile-img {
+      border: 3px solid #00ff80;
+      border-radius: 20px;
+      transition: 0.4s ease;
+      filter: grayscale(20%);
+    }
+
+    .profile-img:hover {
+      transform: rotate(-3deg) scale(1.05);
+      filter: grayscale(0%);
+      box-shadow: 0 0 20px rgba(0, 255, 128, 0.4);
+    }
+
+    h2 {
+      color: #00ff80;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-left: 4px solid #00ff80;
+      padding-left: 15px;
+      margin-top: 40px;
+    }
+
+    ul { list-style: none; padding: 0; }
+    li {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 8px 0;
+      padding: 12px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    li:hover {
+      background: rgba(0, 255, 128, 0.1);
+      transform: translateX(10px);
+      border-left: 4px solid #00ff80;
+    }
+
+    a {
+      color: #00ff80;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a:hover { color: #fff; text-shadow: 0 0 10px #00ff80; }
+
+    hr { border: 0; height: 1px; background: rgba(255, 255, 255, 0.1); margin: 40px 0; }
+
+    .tech-icon {
+      transition: 0.3s;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 5px;
+    }
+
+    .tech-icon:hover {
+      transform: translateY(-10px);
+      background: rgba(0, 255, 128, 0.2);
+    }
+   
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section, h2, hr, .profile-header {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    
+    .profile-img {
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    
+    .tech-icon {
+      border-radius: 8px;
+      margin-right: 10px;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .tech-icon:hover {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    
+    a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-shadow: 0 0 8px rgba(0,123,255,0.2);
+    }
+
+
+    li {
+      margin-bottom: 5px;
+      transition: padding-left 0.3s ease;
+    }
+
+    li:hover {
+      padding-left: 10px;
+      color: #007bff;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, #ccc, #007bff, #ccc);
+      margin: 30px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h2>PORTFOLIO</h2>
+      <img src="images/irish.jpg" class="profile-img" style="width: 180px; height: 180px;">
+      
+      <p style="font-size: 1.2rem; margin-top: 20px;">
+      </p><p>Ramos, Jennievive Irish G.</><br>
+        <b>Email: </b> <a href="mailto:jennieviveramos@gmail.com">jennieviveramos@gmail.com</a><br>
+        <b>Phone: </b>+63 9192407592<br>
+        <b>Location: </b>Concepcion, Tarlac, Philippines<br>
+        <b>LinkedIn: </b> <a href="j.nvie/github-io/portfolio">j.nvie/github-io/portfolio</a></br>
+    </p>
+      </p>
+
+      <p style="background: rgba(0, 255, 128, 0.05); padding: 15px; border-radius: 10px; border-right: 3px solid #00ff80;">
+        This <b>Enterprise Data Management Portfolio</b> showcases my <b>EDM</b> lab activities and my growing skills in managing and organizing digital data structures.
+      </p>
+    </header>
+
+    
+
+    <h2>✍ About Me</h2>
+    <p>I love exploring new technologies and enhancing my knowledge in coding. As an <b>ambivert</b> person, I thrive in solitude to focus on development but become highly dependable once im comfortable with my surroundings. I believe that <i>solitude is where the best code is written.</i></p>
+
+    <h3>📖 Education</h3>
+    <ul>
+      <li><b>Senior High</b>: Benigno S. Aquino National High School | STEM</li>
+      <li><b>Junior High</b>: Benigno S. Aquino National High School | Food Trades </li>
+      <li><b>Elementary</b>: Malupa Elementary School</li>
+    </ul>
+
+    
+
+    <h2>Language Experience</h2>
+    <div style="display: flex; gap: 20px;">
+        <img src="images/html.jpg" class="tech-icon" style="width: 70px; height: 70px;">
+      <img src="images/Java.jpg" class="tech-icon" style="width: 70px; height: 70px;">
+      <img src="images/css.png" class="tech-icon" style="width: 70px; height: 70px;">
+      <img src="images/phy icon.jpg" class="tech-icon" style="width: 70px; height: 70px;">
+    </div>
+
+    
+
+    <h2>My Projects</h2>
+
+    <b>MIDTERM LAB TASK 1:</b> <a href="midterm/lab1/resume.html" target="_blank">
+        Resume Writing using HTML</a>
+    <br><b>MIDTERM LAB TASK 2:</b> <a href="midterm/lab2/table.html" target="_blank">
+        Table List using HTML</a>
+    <br><b>MIDTERM LAB TASK 3:</b> <a href="midterm/lab3/proposal.html" target="_blank">
+        Request Form using HTML</a>
+    <br><b>MIDTERM LAB TASK 4:</b> <a href="midterm/lab4/map.html" target="_blank">
+        World Map</a>
+    <br><b>MIDTERM LAB TASK 5:</b> <a href="midterm/lab5/css.html" target="_blank">
+        Resume with css</a>
+    <br><b>MIDTERM LAB TASK 6:</b> <a href="midterm/lab6/google.html" target="_blank">
+        Nav </a>
+    <br><b>MIDTERM LAB TASK 7:</b> <a href="midterm/lab7/semantic.html" target="_blank">
+        Semmantic </a>
+    <br><b>MIDTERM LAB TASK 8:</b> <a href="midterm/lab8/stylesheet.html" target="_blank">
+        Stylesheet </a>
+
+
+    <p><b>🌟 FINAL TASKS:</b> <a href="">Laboratory Task 1</a></p>
+
+    
+
+    <h2>📍 Fun Facts</h2>
+    <ul>
+      <li>Self-taught HTML to build a Spotify site for a friend. 🎵</li>
+      <li>Doraemon is my all time favorite. 🐱‍🚀</li>
+      <li>Learned Taekwondo at the age of 16.</li>
+      <li>Loves to read.</li>
+      <li>Snoopyaholic</li>
+      <li>Ghibli Fan</li>
+      <li>Loves RnB</li>
+    </ul>
+
+    
+
+    <h2>💻 Technical Skills</h2>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <li>Data Troubleshooting</li>
+      <li>PC Hardware Assembly</li>
+      <li>Time Optimization</li>
+    </div>
+
+    
+
+    <h2>📞 Connect</h2>
+    <div style="display: flex; gap: 20px;">
+        <a href="https://www.messenger.com/jennieviveirish"><img src="images/mess.jpg" class="tech-icon" style="width: 60px;"></a>
+      <a href="https://www.facebook.com/Irish/"><img src="images/fb icon.webp" class="tech-icon" style="width: 60px;"></a>
+      <a href="https://www.x.com/luwie_0/"><img src="images/x icon.png" class="tech-icon" style="width: 60px;"></a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Same Page Different Styles</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.4s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.main-layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.style1 header {
+    background: #0d965e;
+    color: white;
+    padding: 20px;
+}
+
+.style1 .left-menu li {
+    background: #eee;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.style1 .right-sidebar {
+    background: #3ca1e3;
+    color: white;
+    padding: 15px;
+}
+
+.style2 {
+    background: #121212;
+    color: white;
+}
+
+.style2 header {
+    background: black;
+    padding: 20px;
+}
+
+.style2 .left-menu li {
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+.style2 .right-sidebar {
+    background: #222;
+    padding: 15px;
+}
+
+.style3 {
+    background: #ffe6eb;
+}
+
+.style3 header {
+    background: #ff4d6d;
+    color: white;
+    padding: 20px;
+}
+
+.style3 .left-menu li {
+    background: #ffc2d1;
+    padding: 10px;
+}
+
+.style3 .right-sidebar {
+    background: #ff8fab;
+    color: white;
+    padding: 15px;
+}
+
+.style4 {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.style4 header {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+}
+
+.style4 .left-menu li {
+    background: rgba(255,255,255,0.3);
+    padding: 10px;
+}
+
+.style4 .right-sidebar {
+    background: rgba(255,255,255,0.3);
+    padding: 15px;
+}
+
+.nostyle * {
+    all: unset;
+    display: revert;
+}
+
+.left-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-menu a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: inherit;
+    font-weight: bold;
+}
+
+.right-sidebar {
+    flex: 0 0 200px;
+    border-radius: 8px;
+}
+
+main {
+    flex: 1;
+}
+</style>
+
+<script>
+function setStyle(styleName) {
+    document.body.className = styleName;
+}
+</script>
+
+</head>
+
+<body class="style1">
+
+<header>
+    <div class="container">
+        <h1>Welcome to My Homepage</h1>
+        <p>Use the menu to select different styles</p>
+    </div>
+</header>
+
+<div class="container main-layout">
+
+    <nav class="left-menu">
+        <ul>
+            <li><a href="#" onclick="setStyle('style1'); return false;">Stylesheet 1</a></li>
+            <li><a href="#" onclick="setStyle('style2'); return false;">Stylesheet 2</a></li>
+            <li><a href="#" onclick="setStyle('style3'); return false;">Stylesheet 3</a></li>
+            <li><a href="#" onclick="setStyle('style4'); return false;">Stylesheet 4</a></li>
+            <li><a href="#" onclick="setStyle('nostyle'); return false;">No Stylesheet</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Same Page Different Styles</h2>
+        <p>
+            This is a demonstration of how different styles can change the layout of your HTML page.
+        </p>
+
+        <p>
+            Try:
+            <a href="#" onclick="setStyle('style1'); return false;">Style1</a>,
+            <a href="#" onclick="setStyle('style2'); return false;">Style2</a>,
+            <a href="#" onclick="setStyle('style3'); return false;">Style3</a>,
+            <a href="#" onclick="setStyle('style4'); return false;">Style4</a>
+        </p>
+
+        <h2>No Styles</h2>
+        <p>
+            <a href="#" onclick="setStyle('nostyle'); return false;">Click No Style</a>
+        </p>
+    </main>
+
+    <aside class="right-sidebar">
+        <h3>Side-Bar</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </aside>
+
+</div>
+
+</body>
+</html>

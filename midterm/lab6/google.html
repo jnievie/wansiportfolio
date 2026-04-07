@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Task 6</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            justify-content: center;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        fieldset {
+            width: 400px;
+            border-radius: 50px;
+            margin: 10px;
+        }
+
+        .block-input {
+            display: block;   
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+   
+        .inline-text {
+            display: inline-block;
+            vertical-align: middle;
+            width: 300px;
+        }
+
+        .inline-btn {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 5px 10px;
+            margin-left: 5px;
+        }
+
+        .google-logo {
+            display: block;
+            width: 250px;
+        }
+
+        .google-search {
+            padding: 8px;
+            width: 440px;
+            border-radius: 50px;
+            border: 1px solid black;
+        }
+        
+        .signup input {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .signup button {
+            width: 520px;
+            padding: 10px;
+            background: royalblue;
+            color: white;
+            border: none;
+        }
+
+        .signup button:hover {
+            background-color: rgb(87, 107, 167);
+        }
+        
+        .signup button:active{
+            color: black;
+        }
+
+        .ride input {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .ride    button {
+            padding: 8px 15px;
+            margin-right: 5px;
+            border: none;
+        }
+
+        .black-btn {
+            background: rgb(9, 10, 11);
+            color: white;
+        }
+
+        .gray-btn {
+            background: rgb(201, 185, 185);
+        }
+
+        .black-btn:hover {
+            background-color: rgb(50, 54, 58);
+            
+        }
+        .black-btn:active{
+            color:rgb(121, 117, 130);
+        }
+
+        .gray-btn:hover {
+            background: rgb(142, 136, 136);
+        }
+
+        .gray-btn:active{
+            color: rgb(132, 90, 90);
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <div class="container">
+            <input type="text" placeholder="Name" class="block-input">
+            <input type="email" placeholder="Email" class="block-input">
+
+            <div align="center">
+                <p class="inline-text">
+                    Thanks for chatting with our customer support.
+                    Would you like to take our quick survey?
+                </p>
+                <button class="inline-btn">Yes</button>
+                <button class="inline-btn">No</button>
+            </div>
+
+            <div align="center">
+                <img src="googul.jpg" class="google-logo">
+                <input type="text" placeholder="Search Google or type a URL" class="google-search"> 
+            </div>
+
+            <div class="signup">
+                <h3>Sign Up</h3>
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+                <input type="email" placeholder="Email">
+                <button>Sign Up</button>
+            </div>
+
+            <div class="ride">
+                <h3>Request a ride now</h3>
+                <input type="text" placeholder="Enter pickup location">
+                <input type="text" placeholder="Enter destination">
+
+                <button class="black-btn">Request now</button>
+                <button class="gray-btn">Schedule for later</button>
+            </div>
+        </div>
+    </fieldset>
+</body>
+</html>
